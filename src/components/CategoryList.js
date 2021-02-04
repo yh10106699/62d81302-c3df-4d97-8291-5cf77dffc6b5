@@ -23,7 +23,7 @@ const CategoryList = (props) => {
                     const name = c.name;
                     const shortName = c.short_name;
                     return (
-                        <li className="list" key = {name + shortName} onClick={() => handleClick(shortName)}>
+                        <li className="list" key={name + shortName} onClick={() => handleClick(shortName)}>
                             {name} -({shortName})
                         </li>
                     )

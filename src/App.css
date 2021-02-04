@@ -1,10 +1,10 @@
-.list-wrapper{
+.list-wrapper {
     display: flex;
     justify-content: space-evenly;
 }
 
-@media (max-width: 800px){
-    .list-wrapper{
+@media (max-width: 800px) {
+    .list-wrapper {
         display: flex;
         width: 750px;
         flex-direction: column;
@@ -13,8 +13,8 @@
     }
 }
 
-.item-list{
+.item-list {
     margin: 20px;
-    width:50%;
+    width: 50%;
     height: 500px;
 }
