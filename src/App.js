@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import CategoryList from "./components/CategoryList";
+import ItemList from "./components/ItemList";
 
-class App extends Component {
-  render() {
+function App() {
+    const [curCategory, setCurCategory] = React.useState("");
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div className="App">
+            <h3>Menu Categories</h3>
+            <div className="list-wrapper">
+                <CategoryList setCurCategory={setCurCategory}/>
+                <div className="item-list">
+                    {curCategory && <ItemList curCategory={curCategory}/>}
+                </div>
+            </div>
+        </div>
     );
-  }
 }
 
 export default App;
