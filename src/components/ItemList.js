@@ -19,20 +19,20 @@ const ItemList = (props) => {
 
     return (
         <div>
-            <div>{tableName}</div>
-            <table>
+            <div className="itemsHeader">{tableName}</div>
+            <table className="list-table">
                 <thead>
-                <tr className>
-                    <th>Name</th>
-                    <th>Description</th>
+                <tr className="table-header">
+                    <th className="nameColumn">Name</th>
+                    <th className="descriptionColumn">Description</th>
                 </tr>
                 </thead>
                 <tbody>
                 {list.map(item => {
                     return (
                         <tr key={item.name} className="table-body">
-                            <td>{item.name}</td>
-                            <td>{item.description}</td>
+                            <td className="nameColumn">{item.name}</td>
+                            <td className="descriptionColumn">{item.description}</td>
                         </tr>
                     )
                 })}
